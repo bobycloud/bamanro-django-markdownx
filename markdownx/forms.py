@@ -154,10 +154,12 @@ class ImageForm(forms.Form):
         extension = 1
         extension_dot_index = 1
 
-        file_name = "{unique_name}.{extension}".format(
+        file_name = "{original_name}".format(
+            original_name=file_name,
             unique_name=uuid4(),
             extension=path.splitext(file_name)[extension][extension_dot_index:]
         )
+        
         return file_name
 
     def clean(self):
