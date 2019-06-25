@@ -156,7 +156,7 @@ class ImageForm(forms.Form):
 
         file_name = "{original_name}".format(
             original_name=file_name,
-            unique_name=uuid4(),
+            unique_name=str(uuid4())[:16],
             extension=path.splitext(file_name)[extension][extension_dot_index:]
         )
         
