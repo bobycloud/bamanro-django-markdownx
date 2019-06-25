@@ -91,7 +91,7 @@ def readme():
 metadata = get_meta()
 
 setup(
-    name='django-markdownx',
+    name='bamanro-django-markdownx',
     version=metadata.get('version'),
     packages=['markdownx', 'markdownx.tests'],
     maintainer=metadata.get('maintainer'),
